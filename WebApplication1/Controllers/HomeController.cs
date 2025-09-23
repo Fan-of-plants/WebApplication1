@@ -23,7 +23,12 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult Actor()
+        public IActionResult Products()
+        {
+            return View();
+        }
+
+        public IActionResult AdminPanel()
         {
             return View();
         }

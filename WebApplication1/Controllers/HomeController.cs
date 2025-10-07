@@ -8,16 +8,26 @@ namespace WebApplication1.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        static List<Product> products = new()
+        static List<Beer> beers = new()
         {
-            new Product { Id = 1, Price = 199, Title = "Smartphone", Category = "Electronics", Quantity = "10" },
-            new Product { Id = 2, Price = 50, Title = "T-shirt", Category = "Clothing", Quantity = "25" },
-            new Product { Id = 3, Price = 899, Title = "Laptop", Category = "Electronics", Quantity = "5" },
-            new Product { Id = 4, Price = 19, Title = "Mug", Category = "Kitchen", Quantity = "50" },
-            new Product { Id = 5, Price = 120, Title = "Headphones", Category = "Electronics", Quantity = "30" }
-        };
+                new Beer { Id = 1, Price = 45, Brand = "Heineken", Category = "Lager", Countryoforigin = "Netherlands", Package = "Bottle 0.5L" },
+                new Beer { Id = 2, Price = 40, Brand = "Budweiser", Category = "Lager", Countryoforigin = "USA", Package = "Can 0.5L" },
+                new Beer { Id = 3, Price = 38, Brand = "Carlsberg", Category = "Pilsner", Countryoforigin = "Denmark", Package = "Bottle 0.5L" },
+                new Beer { Id = 4, Price = 50, Brand = "Guinness", Category = "Stout", Countryoforigin = "Ireland", Package = "Bottle 0.33L" },
+                new Beer { Id = 5, Price = 42, Brand = "Corona Extra", Category = "Lager", Countryoforigin = "Mexico", Package = "Bottle 0.33L" },
+                new Beer { Id = 6, Price = 47, Brand = "Leffe Blonde", Category = "Abbey Ale", Countryoforigin = "Belgium", Package = "Bottle 0.33L" },
+                new Beer { Id = 7, Price = 35, Brand = "Zhiguli", Category = "Lager", Countryoforigin = "Russia", Package = "Bottle 0.5L" },
+                new Beer { Id = 8, Price = 39, Brand = "Lvivske 1715", Category = "Lager", Countryoforigin = "Ukraine", Package = "Bottle 0.5L" },
+                new Beer { Id = 9, Price = 41, Brand = "Stella Artois", Category = "Pilsner", Countryoforigin = "Belgium", Package = "Can 0.5L" },
+                new Beer { Id = 10, Price = 55, Brand = "Hoegaarden", Category = "Witbier", Countryoforigin = "Belgium", Package = "Bottle 0.33L" },
+                new Beer { Id = 11, Price = 37, Brand = "Kozel", Category = "Dark Lager", Countryoforigin = "Czech Republic", Package = "Can 0.5L" },
+                new Beer { Id = 12, Price = 44, Brand = "Tsingtao", Category = "Lager", Countryoforigin = "China", Package = "Bottle 0.33L" },
+                new Beer { Id = 13, Price = 48, Brand = "Asahi", Category = "Super Dry", Countryoforigin = "Japan", Package = "Bottle 0.33L" },
+                new Beer { Id = 14, Price = 36, Brand = "Obolon Premium", Category = "Lager", Countryoforigin = "Ukraine", Package = "Bottle 0.5L" },
+                new Beer { Id = 15, Price = 52, Brand = "Paulaner", Category = "Weissbier", Countryoforigin = "Germany", Package = "Bottle 0.5L" }
+            };
 
-public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }

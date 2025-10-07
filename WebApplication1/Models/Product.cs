@@ -1,11 +1,12 @@
 ﻿namespace WebApplication1.Models
 {
-    public class Product
+    public class Beer
     {
         public int Id { get; set; }
         public int Price { get; set; }
-        public string Title { get; set; }
+        public string Brand { get; set; }
         public string Category { get; set; }
-        public string Quantity { get; set; }
+        public string Countryoforigin { get; set; }
+        public string Package { get; set; }
     }
 }

@@ -49,11 +49,17 @@ namespace WebApplication1.Controllers
 
         public IActionResult AdminPanel()
         {
-            return View();
+            return View(beers);
         }
 
         public IActionResult Delete(int id)
         {
+            var item = beers.Find(x => x.Id == id);
+
+            if (item == null)
+                return NotFound(); // 404
+
+            beers.Remove(item);
             return RedirectToAction("AdminPanel");
         }
 

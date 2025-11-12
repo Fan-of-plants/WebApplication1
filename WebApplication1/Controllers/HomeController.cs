@@ -73,5 +73,13 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult SaveProduct(Beer element)
+        {
+            beers.Add(element);
+
+            return RedirectToAction("AdminPanel");
+        }
     }
 }

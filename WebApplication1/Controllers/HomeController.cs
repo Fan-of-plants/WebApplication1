@@ -81,5 +81,10 @@ namespace WebApplication1.Controllers
 
             return RedirectToAction("AdminPanel");
         }
+
+        public IActionResult Edit()
+        {
+            return View();
+        }
     }
 }

@@ -82,9 +82,23 @@ namespace WebApplication1.Controllers
             return RedirectToAction("AdminPanel");
         }
 
-        public IActionResult Edit()
+        [HttpPost]
+        public IActionResult UpdateProduct(Beer element)
         {
-            return View();
+            var     index = beers.FindIndex(x => x.Id == element.Id);
+            beers[index] = element;
+
+            return RedirectToAction("AdminPanel");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var item = beers.FirstOrDefault(x => x.Id == id);
+
+            if (item == null)
+                return NotFound(); // 404
+
+            return View(item);
         }
     }
 }

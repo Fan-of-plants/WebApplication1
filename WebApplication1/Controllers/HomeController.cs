@@ -100,5 +100,9 @@ namespace WebApplication1.Controllers
 
             return View(item);
         }
+        public IActionResult Details()
+        {
+            return View();
+        }
     }
 }
